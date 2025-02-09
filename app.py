@@ -55,7 +55,7 @@ def daily_post():
 
 @app.route('/')
 def home():
-    return "🔹مزيينن يعمل! 🔹"
+    return "🔹مزيينtttن يعمل! 🔹"
 
 @app.route('/run')
 def run_manual():
