@@ -47,7 +47,7 @@ def post_to_facebook(message):
     }
     
     try:
-        response = requests.post(url, params=params, timeout=10)
+        response = requests.post(url, params=params, timeout=2)
         return response.json()
     except Exception as e:
         print(f"Facebook Error: {str(e)}")
@@ -63,7 +63,7 @@ def send_telegram_notification(message):
     }
     
     try:
-        requests.post(url, json=payload, timeout=10)
+        requests.post(url, json=payload, timeout=2)
     except Exception as e:
         print(f"Telegram Error: {str(e)}")
 
@@ -72,7 +72,7 @@ def home():
     return "🤖 بوت النشر التلقائي - يعمل بنجاح ⏱️"
 
 # جدولة النشر كل 10 دقائق
-schedule.every(10).minutes.do(
+schedule.every(2).minutes.do(
     lambda: post_to_facebook(generate_post())
 )
 
