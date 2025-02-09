@@ -63,7 +63,7 @@ def run_manual():
     return "✅ تم تشغيل النشر اليدوي!"
 
 # جدولة النشر يوميًا الساعة 9 صباحًا
-schedule.every().day.at("09:00").do(daily_post)
+schedule.every().day.at("22:00").do(daily_post)
 
 def run_scheduler():
     while True:
