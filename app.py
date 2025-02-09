@@ -55,7 +55,7 @@ def daily_post():
 
 @app.route('/')
 def home():
-    return "🔹 بوت النشر التلقائي يعمل! 🔹"
+    return "🔹مزييبيينننننن يعمل! 🔹"
 
 @app.route('/run')
 def run_manual():
