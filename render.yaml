@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: your-app-name
+    env: python
+    repo: https://github.com/phppho/Bot-fb
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -b 0.0.0.0:10000 app:app
+    envVars:
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: FACEBOOK_PAGE_ID
+        sync: false
+      - key: FACEBOOK_ACCESS_TOKEN
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
