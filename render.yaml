@@ -4,7 +4,7 @@ services:
     env: python
     repo: https://github.com/phppho/Bot-fb
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn -b 0.0.0.0:10000 app:app
+    startCommand: gunicorn --bind 0.0.0.0:10000 app:app
     envVars:
       - key: DEEPSEEK_API_KEY
         sync: false
