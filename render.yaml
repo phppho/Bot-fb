@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: your-app-name
+    name: Bot-fb
     env: python
     repo: https://github.com/phppho/Bot-fb
     buildCommand: pip install -r requirements.txt
