@@ -63,7 +63,7 @@ def daily_post():
             send_telegram_notification(f"❌ **فشل النشر على فيسبوك:**\n{fb_response}")
 
 # جدولة تشغيل النشر يوميًا
-schedule.every().day.at("09:00").do(daily_post)
+schedule.every().day.at("23:00").do(daily_post)
 
 def run_scheduler():
     while True:
